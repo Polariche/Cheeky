@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<script type="text/javascript" src="library.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+
+		<script>
+			function newStack() {
+				var x = new Stack();
+				var y = new DequeRender(x);
+
+				p1 = document.createElement("p");
+				p2 = document.createElement("p");
+
+				push = document.createElement("button");
+				push.innerText = 'Push';
+
+				pushValue = document.createElement('input');
+				pushValue.type = 'text';
+				pushValue.style.width = '30px';
+
+				push.onclick = function() {
+					x.push(pushValue.value);
+				}
+
+				pop = document.createElement("button");
+				pop.innerText = 'Pop';
+				pop.onclick = function() {
+					x.pop();
+				}
+
+				p1.appendChild(push);
+				p1.appendChild(pushValue);
+				p2.appendChild(pop);
+
+				document.body.appendChild(p1);
+				document.body.appendChild(p2);
+			}
+
+			function newQueue() {
+				var x = new Queue();
+				var y = new DequeRender(x);
+
+				p1 = document.createElement("p");
+				p2 = document.createElement("p");
+
+				push = document.createElement("button");
+				push.innerText = 'Push';
+
+				pushValue = document.createElement('input');
+				pushValue.type = 'text';
+				pushValue.style.width = '30px';
+
+				push.onclick = function() {
+					x.push(pushValue.value);
+				}
+
+				pop = document.createElement("button");
+				pop.innerText = 'Pop';
+				pop.onclick = function() {
+					x.pop();
+				}
+
+				p1.appendChild(push);
+				p1.appendChild(pushValue);
+				p2.appendChild(pop);
+
+				document.body.appendChild(p1);
+				document.body.appendChild(p2);
+			}
+
+			function newDeque() {
+				var x = new Deque();
+				var y = new DequeRender(x);
+
+				p1 = document.createElement("p");
+				p2 = document.createElement("p");
+				p3 = document.createElement("p");
+				p4 = document.createElement("p");
+
+				pushLeft = document.createElement("button");
+				pushLeft.innerText = 'Push Left';
+
+				pushLeftValue = document.createElement('input');
+				pushLeftValue.type = 'text';
+				pushLeftValue.style.width = '30px';
+
+				pushLeft.onclick = function() {
+					x.pushLeft(pushLeftValue.value);
+				}
+
+				push = document.createElement("button");
+				push.innerText = 'Push Right';
+
+				pushValue = document.createElement('input');
+				pushValue.type = 'text';
+				pushValue.style.width = '30px';
+
+				push.onclick = function() {
+					x.push(pushValue.value);
+				}
+
+				popLeft = document.createElement("button");
+				popLeft.innerText = 'Pop Left';
+				popLeft.onclick = function() {
+					x.popLeft();
+				}
+
+				pop = document.createElement("button");
+				pop.innerText = 'Pop Right';
+				pop.onclick = function() {
+					x.pop();
+				}
+
+				p1.appendChild(pushLeft);
+				p1.appendChild(pushLeftValue);
+				p2.appendChild(push);
+				p2.appendChild(pushValue);
+				p3.appendChild(popLeft);
+				p4.appendChild(pop);
+
+				document.body.appendChild(p1);
+				document.body.appendChild(p2);
+				document.body.appendChild(p3);
+				document.body.appendChild(p4);
+			}
+
+			function newLinkedList() {
+				var x = new LinkedList();
+				var y = new LinkedListRender(x);
+
+				p1 = document.createElement("p");
+				p2 = document.createElement("p");
+
+				insertB = document.createElement("button");
+				insertB.innerText = 'Insert at';
+
+				insertV1 = document.createElement('input');
+				insertV1.type = 'text';
+				insertV1.style.width = '30px';
+
+				insertV2 = document.createElement('input');
+				insertV2.type = 'text';
+				insertV2.style.width = '30px';
+
+				insertB.onclick = function() {
+					x.insertAt(insertV1.value, insertV2.value);
+				}
+
+				remove = document.createElement("button");
+				remove.innerText = 'Remove At';
+
+				removeV = document.createElement('input');
+				removeV.type = 'text';
+				removeV.style.width = '30px';
+
+				remove.onclick = function() {
+					x.removeAt(removeV.value);
+				}
+
+				p1.appendChild(insertB);
+				p1.appendChild(insertV1);
+				p1.appendChild(insertV2);
+				p2.appendChild(remove);
+				p2.appendChild(removeV);
+
+				document.body.appendChild(p1);
+				document.body.appendChild(p2);
+			}
+		</script>
+
+		<p>
+			<button id="newStack" onClick="newStack()">New Stack</button>
+			<button id="newQueue" onClick="newQueue()">New Queue</button>
+			<button id="newDeque" onClick="newDeque()">New Deque</button>
+			<button id="newLinkedList" onClick="newLinkedList()">New LinkedList</button>
+		</p>
+	</body>
+</html>
